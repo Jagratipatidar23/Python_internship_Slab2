@@ -1,0 +1,27 @@
+<!-- 2. Sentiment Analysis Web App using Flask + TextBlob -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis</title>
+</head>
+<body>
+
+    <h1>Sentiment Analysis using TextBlob</h1>
+
+    <form method="POST">
+        <textarea name="text" rows="6" cols="50" placeholder="Enter text here"></textarea>
+        <br><br>
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if result %}
+        <h2>Result</h2>
+        <p><b>Text:</b> {{ result.text }}</p>
+        <p><b>Sentiment:</b> {{ result.sentiment }}</p>
+        <p><b>Polarity:</b> {{ result.polarity }}</p>
+        <p><b>Subjectivity:</b> {{ result.subjectivity }}</p>
+    {% endif %}
+
+</body>
+</html>
